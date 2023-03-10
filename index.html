@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rudra Prasad Sahu</title>
+</head>
+
+<body onload="typeNextWord()">
+    <div>Hey there, <span class="yellow">folks!</span>
+    </div>
+
+    <p> It's your boy <span class="yellow">Rudra Prasad Sahu</span> here, currently a research undergrad at the <span
+            class="yellow">Indian Institute of
+            Science Education and Research,Berhampur</span>. I'm a second-year student who's all about physics and
+        computer
+        science.
+        That's right, I'm planning to major in <span class="yellow">physics</span> and minor in <span
+            class="yellow">computer science</span>.
+    </p>
+    <p>But let me tell you what really gets me going: <span class="yellow">quantum physics</span> (till now). That stuff
+        is out of this world, literally. I'm
+        super interested in exploring how it can be applied in the fields of physics and computer science, especially
+        when it comes to <span class="yellow">quantum computing</span>.</p>
+
+    <p>When I'm not geeking out over physics, you can probably find me messing around with artificial intelligence and
+        machine learning. I've done a bunch of projects using Python, MATLAB, and C++. Don't worry if you don't know
+        what those are, just know that I'm a <span class="yellow">boss</span> at them.</p>
+
+    <p>Oh, and did I mention that I'm also a <span class="yellow">website whiz</span> ? That's right, I've designed a
+        few websites in my spare time.
+        No biggie.</p>
+
+    <p>When I'm not on the computer, I'm all about that two-wheel life. That's right, I love <span
+            class="yellow">riding</span> my bike around town.
+        It's just me, the wind in my hair, and the open road.</p>
+
+    <p>And let's not forget about my <span class="yellow">photography</span> skills. I love capturing candid moments,
+        even though I don't have a
+        fancy camera yet. But mark my words, I'll have one soon enough.</p>
+
+    <p>So there you have it, folks. I'm a highly motivated and organized student who's always looking to push boundaries
+        and learn more. And when I'm not busy being a physics/computer science prodigy, you can probably catch me
+        snoozing away in my cozy bed. Hey, <span class="yellow">a guy's gotta rest up if he's gonna change the
+            world</span>, am I right?
+    </p>
+
+    <p>Thanks for tuning in!</p>
+    <p class="yellow">Stay Bold & Have a <span id="typing"></span> <span id="dayOfWeek"></span></p>
+
+    <script>
+        // Get the current date
+        var currentDate = new Date();
+
+        // Get the day of the week as a number (0-6)
+        var dayOfWeekNumber = currentDate.getDay();
+
+        // Convert the day of the week number to a string
+        var dayOfWeekString;
+        switch (dayOfWeekNumber) {
+            case 0:
+                dayOfWeekString = "Sunday";
+                break;
+            case 1:
+                dayOfWeekString = "Monday";
+                break;
+            case 2:
+                dayOfWeekString = "Tuesday";
+                break;
+            case 3:
+                dayOfWeekString = "Wednesday";
+                break;
+            case 4:
+                dayOfWeekString = "Thursday";
+                break;
+            case 5:
+                dayOfWeekString = "Friday";
+                break;
+            case 6:
+                dayOfWeekString = "Saturday";
+                break;
+        }
+
+        // Set the text of the dayOfWeek span to the current day of the week
+        document.getElementById("dayOfWeek").textContent = dayOfWeekString;
+    </script>
+
+    <script>
+        var words = ["Marvelous", "Fabulous", "Fantastic", "Superb", "Phenomenal", "Thrilling"]; // Array of words to auto-type
+        var index = 0; // Index to keep track of which word to type next
+
+        function typeNextWord() {
+            var word = words[index]; // Get the next word to type
+            index = (index + 1) % words.length; // Increment the index and wrap around if necessary
+            document.getElementById("typing").innerHTML = ""; // Clear the existing text
+            typeWord(word, 0); // Start typing the new word
+        }
+
+        function typeWord(word, index) {
+            if (index < word.length) { // If we haven't typed the whole word yet
+                var text = document.getElementById("typing").innerHTML; // Get the current text
+                text += word.charAt(index); // Add the next character
+                document.getElementById("typing").innerHTML = text; // Update the text on the page
+                setTimeout(function () { typeWord(word, index + 1); }, 100); // Wait 100ms and then type the next character
+            } else {
+                setTimeout(typeNextWord, 1000); // Wait 1s and then start typing the next word
+            }
+        }
+    </script>
+</body>
+
+</html>
