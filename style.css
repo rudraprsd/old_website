@@ -25,12 +25,12 @@ body {
 }
 
 p {
-    display: inline;
+    display: inline-block;
 }
 
 h1{
     font-size: 35px;
-    display: inline;
+    display: inline-block;
 }
 
 .sec {
