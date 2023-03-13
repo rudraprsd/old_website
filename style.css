@@ -96,10 +96,8 @@ h1{
 }
 
 .love {
-    /* display: flex; */
     margin: 25px auto;
     font-size: 24px;
-
     align-items: center;
     max-width: 600px;
 }
@@ -110,10 +108,83 @@ h1{
 
 @media screen and (max-width: 768px) {
 
+    .container {
+        max-width: 410px;
+    }
+    .profile-pic {
+        height: 100px;
+        width: 100px;
+    }
+    .description {
+        font-size: 10px;
+    }
+
+    .word {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .sec{
+        font-size: 20px;
+    }
+
+    .link {
+        font-size: 18px;
+    }
+
     .sec {
         padding-left: 80px;
         padding-right: 80px;
         padding-top: 40px;
         padding-bottom: 10px;
+    }
+
+    .love {
+        max-width: 290px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .sec {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .profile-pic {
+        margin-right: 10px;
+    }
+    .container {
+        max-width: 380px;
+        margin-left: 26px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .words-container {
+        display: inline;
+        margin-bottom: 50px;
+        padding-bottom: 250px;
+    }
+    .word {
+        padding-left: 50px;
+        max-height: 40px;
+    }
+    .profile-pic{
+        /* margin-right: 0px; */
+        width: 90px;
+        height: 90px;
+    }
+    .profile-info {
+        margin-top: -20px;
+    }
+    .love {
+        margin-top: 90px;
+    }
+    .name {
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+    .description{
+        font-size: 10px;
     }
 }
