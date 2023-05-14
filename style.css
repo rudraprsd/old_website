@@ -88,11 +88,11 @@ h1{
 .link {
     text-decoration: none;
     font-size: 35px;
-    color: #fefefe;
+    color: #999999;
 }
 
 .link:hover {
-    color: #b3a577;
+    color: #fefefe;
 }
 
 .love {
